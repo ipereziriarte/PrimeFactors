@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.blokura.primefactors.PrimeFactors.generate;
-import static org.junit.Assert.*;
 
 public class PrimeFactorsTest extends TestCase {
 
@@ -43,6 +42,10 @@ public class PrimeFactorsTest extends TestCase {
 
     public void testEight() {
         assertEquals(list(2,2,2), generate(8));
+    }
+
+    public void testNine() {
+        assertEquals(list(3,3), generate(9));
     }
 
 }
