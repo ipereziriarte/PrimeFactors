@@ -12,15 +12,13 @@ public class PrimeFactors {
         List<Integer> primes = new ArrayList<Integer>();
         int candidate = 2;
         while (n > 1) {
-            while (n % candidate == 0) {
+            for (; n % candidate == 0; n /= candidate) {
                 primes.add(candidate);
-                n /= candidate;
             }
+            
             candidate++;
         }
-        if (n > 1) {
-            primes.add(n);
-        }
+
         return primes;
     }
 
